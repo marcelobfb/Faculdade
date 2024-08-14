@@ -86,10 +86,10 @@
 int main()
 {
     char nomes[4][30];
-    int idades[4][10];
-    char maiornome[30];
+    int idades[4];
+    char maisvelho[30];
     int soma = 0;
-    float media = 0;
+    int media = 0;
     int maior = 0;
     int qtdpar = 0;
     for (int i = 0; i < 4; i++)
@@ -99,10 +99,10 @@ int main()
         printf("Idade: ");
         scanf("%d", &idades[i]);
         soma = soma + idades[i];
-        if (idades[i]>maior)
+        if (idades[i] > maior)
         {
             maior = idades[i];
-            strcpy(maiornome, nomes[i]);
+            strcpy(maisvelho, nomes[i]);
         }
         if (idades[i] % 2 == 0)
         {
@@ -110,8 +110,8 @@ int main()
         }
     }
     media = soma / 4;
-    printf("A media é %.2f", media);
-    printf("O nome da pessoa mais velha é Sr(a) %c", maiornome);
-    printf("%d pessoas possuem idade par", qtdpar);
+    printf("A media é %d\n", media);
+    printf("O nome da pessoa mais velha é Sr(a) %s\n", maisvelho);
+    printf("%d pessoas possuem idade par\n", qtdpar);
     return 0;
 }
