@@ -88,6 +88,7 @@ int main()
     char nomes[4][30];
     int idades[4];
     char maisvelho[30];
+    char nomecompleto[30];
     int soma = 0;
     int media = 0;
     int maior = 0;
@@ -109,9 +110,11 @@ int main()
             qtdpar++;
         }
     }
+    strcpy(nomecompleto,"Sr(a) ");
+    strcat(nomecompleto, maisvelho);
     media = soma / 4;
     printf("A media é %d\n", media);
-    printf("O nome da pessoa mais velha é Sr(a) %s\n", maisvelho);
+    printf("O nome da pessoa mais velha é %s\n", nomecompleto);
     printf("%d pessoas possuem idade par\n", qtdpar);
     return 0;
 }
