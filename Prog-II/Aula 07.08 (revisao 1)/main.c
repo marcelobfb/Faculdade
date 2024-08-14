@@ -57,26 +57,33 @@
 //  }
 // exercicio 3
 #include <stdio.h>
-int main() {
+int main()
+{
     float salario[2][3];
     float media = 0;
     float somatoria = 0;
     int countabaixomedia = 0;
     int countentre = 0;
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
             printf("Qual salario: ");
             scanf(" %f", &salario[i][j]);
             somatoria = somatoria + salario[i][j];
-            if (salario[i][j] >= 1250 && salario[i][j] <= 1800) {
+            if (salario[i][j] >= 1250 && salario[i][j] <= 1800)
+            {
                 countentre++;
             }
         }
     }
     media = somatoria / 6;
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            if (salario[i][j] < media) {
+    for (int i = 0; i < 2; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            if (salario[i][j] < media)
+            {
                 countabaixomedia++;
             }
         }
