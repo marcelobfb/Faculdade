@@ -41,11 +41,28 @@
 //*operadores de comparação ==, ===
 //== --> verifica se os dados são iguais
 //=== --> verifica se os valores são iguais
-x=10
-y='10'
-document.write(`O valor de ${x} é igual o valor de ${y} ? ${x==y}`)
-document.write(`<br> O valor de ${x} é igual o valor de ${y} ? ${x===y}`)
-x1=+(prompt('Digite um numero'))
-y1=prompt('Digite um numero')
-document.write(`<br>O valor ${x1} é igual ${y1}? ${x1==y1}`)
-document.write(`<br>O valor ${x1} é igual ${y1}? ${x1===y1}`)
+// x=10
+// y='10'
+// document.write(`O valor de ${x} é igual o valor de ${y} ? ${x==y}`)
+// document.write(`<br> O valor de ${x} é igual o valor de ${y} ? ${x===y}`)
+// x1=+(prompt('Digite um numero'))
+// y1=prompt('Digite um numero')
+// document.write(`<br>O valor ${x1} é igual ${y1}? ${x1==y1}`)
+// document.write(`<br>O valor ${x1} é igual ${y1}? ${x1===y1}`)
+
+//*operador diferente !=, !==
+// o != --> verifica se os dados são diferentes
+// o !== --> verifica se os valores são diferentes
+// x=10
+// y='10'
+// document.write(`O valor de ${x} é diferente do valor de ${y} ? ${x!=y}`)
+// document.write(`<br> O valor de ${x} possui identidade diferente de ${y} ? ${x!==y}`)
+// x1=+(prompt('Digite um numero'))
+// y1=prompt('Digite um numero')
+// document.write(`<br>O valor ${x1} é diferente do ${y1}? ${x1!=y1}`)
+// document.write(`<br>O valor ${x1} possui identidade diferente de ${y1}? ${x1!==y1}`)
+
+//*operadores relacionais >,>=,<,<=
+n1=+(prompt('Digite um numero'))
+n2=parseFloat(prompt('Digite um numero'))
+document.write(`<br>o valor de ${n1} é maior que o valor de ${n2} ? ${n1>n2}`)
