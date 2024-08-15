@@ -77,7 +77,34 @@
 
 //*biblioteca math
 //potencia --> pow(valor da base, valor da potencia)
-x=10
-y=2
-p=Math.pow(x,y)
-document.write(`${x} elevado a ${y} é ${p}`)
+// x=10
+// y=2
+// p=Math.pow(x,y)
+// document.write(`${x} elevado a ${y} é ${p}`)
+// x3=+(prompt("Digite um numero"))
+// y3=+(prompt("Digite o valor da potencia"))
+// document.write(`<br>O numero ${x3} elevado a ${y3} = ${Math.pow(x3,y3)}`)
+
+//*sqrt() --> raiz quadrada
+//.toFixed() --> é igual %.2f
+// x=+(prompt("Digite um numero"))
+// r=Math.sqrt(x)
+// document.write(`<br>a raiz quadrada de ${x} é ${r.toFixed(2)}`)
+
+//*cbrt() --> raiz cubica
+// x=+(prompt("Digite um numero"))
+// c=Math.cbrt(x)
+// document.write(`<br>A raiz cubica de ${x} é ${c.toFixed(2)}`)
+
+//*round() --> arredonda matematicamente
+//ceil() --> arredonda para cima
+//floor() --> arredonda para baixo
+// x=+(prompt("Digite um numero"))
+// document.write(`<br>${x} arrendondado matematicamente é ${Math.round(x)}`) 
+// document.write(`<br>${x} arrendondado para cima é ${Math.ceil(x)}`) 
+// document.write(`<br>${x} arrendondado para baixo é ${Math.floor(x)}`) 
+
+//* random() --> gera numeros aleatorios entre 0 e 1
+document.write(`<br>O numero aleatorio entre 0 e 1 ${Math.random()}`)
+document.write(`<br>O numero aleatorio entre 0 e 1 ${Math.random().toFixed(0)}`)
+document.write(`<br>O numero aleatorio entre 0 e 1 ${(Math.random()*50).toFixed(0)}`)
