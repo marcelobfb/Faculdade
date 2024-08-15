@@ -105,6 +105,6 @@
 // document.write(`<br>${x} arrendondado para baixo é ${Math.floor(x)}`) 
 
 //* random() --> gera numeros aleatorios entre 0 e 1
-document.write(`<br>O numero aleatorio entre 0 e 1 ${Math.random()}`)
-document.write(`<br>O numero aleatorio entre 0 e 1 ${Math.random().toFixed(0)}`)
-document.write(`<br>O numero aleatorio entre 0 e 1 ${(Math.random()*50).toFixed(0)}`)
+// document.write(`<br>O numero aleatorio entre 0 e 1 ${Math.random()}`)
+// document.write(`<br>O numero aleatorio entre 0 e 1 ${Math.random().toFixed(0)}`)
+// document.write(`<br>O numero aleatorio entre 0 e 1 ${(Math.random()*50).toFixed(0)}`)
