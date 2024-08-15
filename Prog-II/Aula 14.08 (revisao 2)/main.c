@@ -116,5 +116,5 @@ int main()
     printf("A media é %d\n", media);
     printf("O nome da pessoa mais velha é %s\n", nomecompleto);
     printf("%d pessoas possuem idade par\n", qtdpar);
-    return 0;
+    return 0;  
 }
