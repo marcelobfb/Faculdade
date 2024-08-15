@@ -63,6 +63,21 @@
 // document.write(`<br>O valor ${x1} possui identidade diferente de ${y1}? ${x1!==y1}`)
 
 //*operadores relacionais >,>=,<,<=
-n1=+(prompt('Digite um numero'))
-n2=parseFloat(prompt('Digite um numero'))
-document.write(`<br>o valor de ${n1} é maior que o valor de ${n2} ? ${n1>n2}`)
+// n1=+(prompt('Digite um numero'))
+// n2=parseFloat(prompt('Digite um numero'))
+// document.write(`<br>${n1} > ${n2} ? ${n1>n2}`)
+
+//*operadores logicos &&(e),||(ou),!(negação)
+// console.log(20 < 40 && 30 > 5);
+// console.log(20 < 40 && 30 < 5);
+// console.log(20 < 40 || 30 < 5);
+// console.log(2 < 3);
+// console.log(!(2 < 3));
+// console.log(!!(2 < 3));
+
+//*biblioteca math
+//potencia --> pow(valor da base, valor da potencia)
+x=10
+y=2
+p=Math.pow(x,y)
+document.write(`${x} elevado a ${y} é ${p}`)
