@@ -1,3 +1,4 @@
+-------------------------------------------------------------
 SELECT * FROM cliente; (puxa todos os clientes)
 SELECT COUNT(*) AS qtdclient FROM cliente WHERE estado='Rio de Janeiro'; (puxa a quantidade de clientes que sao do rj)
 SELECT estado, COUNT(*) AS qtdcliente FROM cliente GROUP BY estado ORDER BY qtdcliente DESC LIMIT 10;(estados com maiores clientes de cima para baixo)
@@ -6,3 +7,4 @@ SELECT nomecliente FROM cliente WHERE genero='F';(numeros de clientes mulheres)
 SELECT MIN(preco) FROM produto;(produto organizado por preço de menor para maior)
 SELECT MAX(preco) FROM produto;(grupo organizado por preço do maior para menor)
 SELECT * FROM produto; (puxa todos os produtos)
+-------------------------------------------------------------
