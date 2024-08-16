@@ -8,3 +8,6 @@ SELECT MIN(preco) FROM produto;(produto organizado por preço de menor para maio
 SELECT MAX(preco) FROM produto;(grupo organizado por preço do maior para menor)
 SELECT * FROM produto; (puxa todos os produtos)
 -------------------------------------------------------------
+SELECT * FROM cliente
+WHERE nomecliente LIKE 'A%'
+AND cidade='Niterói'; (puxa as pessoas que começa com 'A' e moram em niteroi)
