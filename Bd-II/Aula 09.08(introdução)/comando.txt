@@ -12,3 +12,31 @@ SELECT * FROM produto; (puxa todos os produtos)
 SELECT * FROM cliente
 WHERE nomecliente LIKE 'A%'
 AND cidade='Niterói'; (puxa as pessoas que começa com 'A' e moram em niteroi)
+
+-----------------
+CREATE TABLE tipo_produto(
+codtipo int PRIMARY KEY,
+descricao varchar(50)
+);
+
+CREATE TABLE produto(
+codproduto int PRIMARY KEY,
+descricao varchar(50),
+preco real,
+codtipo int,
+FOREIGN KEY(codtipo) REFERENCES tipo_produto(codtipo)
+);
+
+INSERT INTO tipo_produto(codtipo,descricao)VALUES
+(1,'Computador'),
+(2,'Impressora');
+
+SELECT * FROM tipo_produto;
+
+INSERT INTO produto(codproduto,descricao,preco,codtipo)VALUES
+(1,'PC desktop modelo X',2500,1),
+(2,'PC notebook ABC',3500,1),
+(3,'Impressora jato de tinta',600,2),
+(4,'Impressora laser',800,2);
+
+SELECT * FROM produto ORDER BY codproduto ASC LIMIT 10;
