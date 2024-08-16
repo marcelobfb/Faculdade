@@ -1,3 +1,4 @@
+https://sqliteonline.com/
 -------------------------------------------------------------
 SELECT * FROM cliente; (puxa todos os clientes)
 SELECT COUNT(*) AS qtdclient FROM cliente WHERE estado='Rio de Janeiro'; (puxa a quantidade de clientes que sao do rj)
