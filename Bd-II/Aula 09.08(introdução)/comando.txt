@@ -1,0 +1,8 @@
+SELECT * FROM cliente;
+SELECT COUNT(*) AS qtdclient FROM cliente WHERE estado='Rio de Janeiro';
+SELECT estado, COUNT(*) AS qtdcliente FROM cliente GROUP BY estado ORDER BY qtdcliente DESC LIMIT 10;
+SELECT estado, COUNT(*) AS qtdcliente FROM cliente GROUP BY estado ORDER BY qtdcliente ASC LIMIT 10;
+SELECT nomecliente FROM cliente WHERE genero='F';
+SELECT MIN(preco) FROM produto;
+SELECT MAX(preco) FROM produto;
+SELECT * FROM produto;
