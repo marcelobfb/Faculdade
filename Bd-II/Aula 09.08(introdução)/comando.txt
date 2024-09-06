@@ -40,3 +40,53 @@ INSERT INTO produto(codproduto,descricao,preco,codtipo)VALUES
 (4,'Impressora laser',800,2);
 
 SELECT * FROM produto ORDER BY codproduto ASC LIMIT 10;
+-----------------------------------------------------------
+exercicios 06/09:
+
+SIGMA=SELEÇAO
+PI = PROJEÇÃO
+R=RESULTADO
+
+11- Moste o cpf, o nome e o salario dos funcionarios que ganham mais de 2500:
+resposta:
+
+temp<-sigma(funcionairos)
+        salario>2500
+R<-pi(temp)
+    cpf,pnome,salario
+
+12-mostre o nome e alocalizaçao dos projetos do departamento 5
+resposta:
+
+    R<-pi(sigma(projeto)
+            dnum=5)
+    prodnome, prodlocal
+
+13-mostre o cpf do funcionario e o numero do projeto cujas horas sao maiores que 10
+resposta:
+
+    TEMP<- SIGMA(trabalha.em)
+            horas>10
+        R<-pi(temp)
+            fcpf,PNR
+
+
+14-mostre o nome e o sexo do dependente cujo numero do cpf do funcionario é 123456789
+resposta:
+
+    R<-pi(SIGMA(dependente)
+        fcpf='123456789')
+        nome_dependente,sexo
+
+15-mostre o nome, a data de nascimento e o parentesco dos dependentes cujo cpf do funcionario é 333445555
+resposta:
+
+    R<-pi(sigma(dependente)
+        fcpf='333445555')
+        nome_dependente,datanasc,parentesco
+------------------------------------------------------------------------------------------------------------
+https://dbis-uibk.github.io/relax/landing
+
+(EMPLOYEE)⨝ EMPLOYEE.Dno = DEPARTMENT.Dnumber (DEPARTMENT)
+
+π Fname, Dname ((EMPLOYEE)⨝ EMPLOYEE.Dno = DEPARTMENT.Dnumber (DEPARTMENT))
