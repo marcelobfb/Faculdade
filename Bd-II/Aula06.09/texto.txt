@@ -47,4 +47,20 @@ https://dbis-uibk.github.io/relax/landing
 (EMPLOYEE)⨝ EMPLOYEE.Dno = DEPARTMENT.Dnumber (DEPARTMENT)
 
 π Fname, Dname ((EMPLOYEE)⨝ EMPLOYEE.Dno = DEPARTMENT.Dnumber (DEPARTMENT))
+-------------------------------------------------------------------------------------------------------------
+SELECT * FROM produto;
 
+SELECT * FROM marca;
+
+SELECT nomeproduto,nomemarca 
+FROM produto, marca 
+WHERE produto.idmarca=marca.idmarca
+AND nomemarca='Bom Prato';
+
+SELECT * FROM cliente;
+SELECT * FROM compras;
+SELECT * FROM loja;
+
+SELECT nomecliente, idcompra, idproduto, dtcompra, nomeloja, qtd
+FROM cliente, compras, loja
+WHERE cliente.idcliente=compras.idcliente AND loja.idloja=compras.idloja
