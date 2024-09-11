@@ -67,14 +67,18 @@ int main()
 {
     char tamanho;
     char sexo;
+    float valorFinal = 0;
     printf("Tamanho: ");
     scanf(" %c", &tamanho);
     printf("sexo: ");
     scanf(" %c", &sexo);
-    printf("A sua camisa de tamanho %c do sexo %c custa %.2f\n", tamanho, sexo, valor(tamanho, sexo));
+    valorFinal = valor(tamanho, sexo);
+    printf("A sua camisa de tamanho %c do sexo %c custa %.2f\n", tamanho, sexo, valorFinal);
 }
 float valor(char tamanho, char sexo)
 {
+    float t = 0;
+
     if (tamanho == 'p' && sexo == 'm')
     {
         float t = 22.25;
