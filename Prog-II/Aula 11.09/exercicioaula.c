@@ -62,40 +62,47 @@
 // }
 
 // 4
-float valor(char tamanho,char sexo);
+float valor(char tamanho, char sexo);
 int main()
 {
-char tamanho;
-char sexo;
-printf("Tamanho: ");
-scanf(" %c", &tamanho);
-printf("sexo: ");
-scanf(" %c", &sexo);
-printf("A sua camisa de tamanho %c do sexo %c custa %.2f\n",tamanho,sexo,valor(tamanho,sexo));
+    char tamanho;
+    char sexo;
+    printf("Tamanho: ");
+    scanf(" %c", &tamanho);
+    printf("sexo: ");
+    scanf(" %c", &sexo);
+    printf("A sua camisa de tamanho %c do sexo %c custa %.2f\n", tamanho, sexo, valor(tamanho, sexo));
 }
-float valor(char tamanho,char sexo){
-    if(tamanho=='p'&&sexo=='m'){
-        float t=22.25;
+float valor(char tamanho, char sexo)
+{
+    if (tamanho == 'p' && sexo == 'm')
+    {
+        float t = 22.25;
         return t;
     }
-    else if(tamanho=='m'&&sexo=='m'){
-        float t=27.15;
+    else if (tamanho == 'm' && sexo == 'm')
+    {
+        float t = 27.15;
         return t;
     }
-    else if(tamanho=='g'&&sexo=='m'){
-        float t=40;
+    else if (tamanho == 'g' && sexo == 'm')
+    {
+        float t = 40;
         return t;
     }
-    else if(tamanho=='p'&&sexo=='f'){
-        float t=28.75;
+    else if (tamanho == 'p' && sexo == 'f')
+    {
+        float t = 28.75;
         return t;
     }
-    else if(tamanho=='m'&&sexo=='f'){
-        float t=39.99;
+    else if (tamanho == 'm' && sexo == 'f')
+    {
+        float t = 39.99;
         return t;
     }
-    else if(tamanho=='g'&&sexo=='f'){
-        float t=51;
+    else if (tamanho == 'g' && sexo == 'f')
+    {
+        float t = 51;
         return t;
     }
 }
