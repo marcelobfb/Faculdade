@@ -38,25 +38,64 @@
 // }
 
 // 3
-int dvida(int x, int y, int z);
+// int dvida(int x, int y, int z);
+// int main()
+// {
+//     int anos = 0;
+//     int meses = 0;
+//     int dias = 0;
+
+//     printf("anos:");
+//     scanf("%d", &anos);
+//     printf("meses:");
+//     scanf("%d", &meses);
+//     printf("dias:");
+//     scanf("%d", &dias);
+//     printf("\n%d dias de vida", dvida(anos, meses, dias));
+// }
+// int dvida(int x, int y, int z)
+// {
+//     x = x * 365;
+//     y = y * 30;
+//     int t = x + y + z;
+//     return t;
+// }
+
+// 4
+float valor(char tamanho,char sexo);
 int main()
 {
-    int anos = 0;
-    int meses = 0;
-    int dias = 0;
-
-    printf("anos:");
-    scanf("%d", &anos);
-    printf("meses:");
-    scanf("%d", &meses);
-    printf("dias:");
-    scanf("%d", &dias);
-    printf("\n%d dias de vida", dvida(anos, meses, dias));
+char tamanho;
+char sexo;
+printf("Tamanho: ");
+scanf(" %c", &tamanho);
+printf("sexo: ");
+scanf(" %c", &sexo);
+printf("A sua camisa de tamanho %c do sexo %c custa %.2f\n",tamanho,sexo,valor(tamanho,sexo));
 }
-int dvida(int x, int y, int z)
-{
-    x = x * 365;
-    y = y * 30;
-    int t = x + y + z;
-    return t;
+float valor(char tamanho,char sexo){
+    if(tamanho=='p'&&sexo=='m'){
+        float t=22.25;
+        return t;
+    }
+    else if(tamanho=='m'&&sexo=='m'){
+        float t=27.15;
+        return t;
+    }
+    else if(tamanho=='g'&&sexo=='m'){
+        float t=40;
+        return t;
+    }
+    else if(tamanho=='p'&&sexo=='f'){
+        float t=28.75;
+        return t;
+    }
+    else if(tamanho=='m'&&sexo=='f'){
+        float t=39.99;
+        return t;
+    }
+    else if(tamanho=='g'&&sexo=='f'){
+        float t=51;
+        return t;
+    }
 }
