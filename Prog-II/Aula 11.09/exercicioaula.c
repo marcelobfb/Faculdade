@@ -38,24 +38,25 @@
 // }
 
 // 3
-int dvida(int x,int y,int z);
-int main(){
-    int anos=0;
-    int meses=0;
-    int dias=0;
+int dvida(int x, int y, int z);
+int main()
+{
+    int anos = 0;
+    int meses = 0;
+    int dias = 0;
 
     printf("anos:");
-    scanf("%d",&anos);
+    scanf("%d", &anos);
     printf("meses:");
-    scanf("%d",&meses);
+    scanf("%d", &meses);
     printf("dias:");
-    scanf("%d",&dias);
-    printf("\n%d",dvida(anos,meses,dias));
+    scanf("%d", &dias);
+    printf("\n%d dias de vida", dvida(anos, meses, dias));
 }
-int dvida(int x,int y,int z){
-    x=x*365;
-    y=y*30;
-    int t=x+y+z;
+int dvida(int x, int y, int z)
+{
+    x = x * 365;
+    y = y * 30;
+    int t = x + y + z;
     return t;
-
 }
