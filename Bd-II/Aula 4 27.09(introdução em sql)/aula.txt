@@ -1,0 +1,28 @@
+CREATE TABLE aluno (
+matricula INTEGER PRIMARY KEY,
+nome VARCHAR(30) NOT NULL,
+sexo CHAR(1),
+dtNascimento DATE NOT NULL
+);
+
+CREATE TABLE departamento (
+codDepto INTEGER PRIMARY KEY,
+nomeDepto VARCHAR(30) NOT NULL);
+
+CREATE TABLE curso(
+codCurso INTEGER PRIMARY KEY,
+nomeCurso VARCHAR(30) NOT NULL,
+ch INT NOT NULL,
+preco REAL NOT NULL,
+codDepto INTEGER,
+FOREIGN KEY(codDepto) REFERENCES departamento(codDepto)
+);
+
+CREATE TABLE matricula(
+matricula INTEGER,
+codCurso INTEGER,
+dMatricula DATE,
+PRIMARY KEY(matricula,codCurso),
+FOREIGN KEY(matricula) REFERENCES aluno(matricula),
+FOREIGN KEY(codCurso) REFERENCES curso(codCurso)
+);
