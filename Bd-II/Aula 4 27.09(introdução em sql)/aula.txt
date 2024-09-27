@@ -26,3 +26,31 @@ PRIMARY KEY(matricula,codCurso),
 FOREIGN KEY(matricula) REFERENCES aluno(matricula),
 FOREIGN KEY(codCurso) REFERENCES curso(codCurso)
 );
+
+CREATE TABLE func(
+codfunc INTEGER PRIMARY KEY,
+nomefunc VARCHAR(20),
+city VARCHAR(20),
+CBO INTEGER,
+UF CHAR(2),
+coddepto INTEGER,
+FOREIGN KEY(coddepto) REFERENCES departamento(coddepto)
+);
+
+ALTER TABLE func RENAME COLUMN city to cidade;
+
+ALTER TABLE func ADD COLUMN sexo char(1);
+
+ALTER TABLE func ALTER COLUMN nomefunc TYPE VARCHAR(30);
+
+ALTER TABLE func DROP COLUMN CBO;
+
+ALTER TABLE func ALTER COLUMN UF SET DEFAULT
+'RJ';
+
+ALTER TABLE func RENAME TO funcionario;
+
+ALTER TABLE funcionario ALTER COLUMN nomefunc SET NOT NULL;
+
+CREATE SEQUENCE funcionarioseq;
+ALTER TABLE funcionario ALTER COLUMN codfunc SET DEFAULT nextval('funcionarioseq');
