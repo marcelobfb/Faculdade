@@ -33,4 +33,5 @@ INSERT INTO curso (codcurso,nomecurso,ch,preco,coddepto) VALUES
 (3,'Pentaho',40,1200,1),
 (4,'Recursos Humanos',60,2000,2),
 (5,'Marketing',80,2500,1);
+
 SELECT * FROM curso;
