@@ -102,3 +102,23 @@ INNER JOIN produto AS pr
     ON pr.idproduto = co.idproduto
 GROUP BY lo.nomeloja
 ORDER BY faturamento DESC;
+
+-- ex17
+SELECT cl.nomecliente, SUM(co.qtd) AS total
+	FROM compras AS co
+	INNER JOIN cliente AS cl
+		ON co.idcliente = cl.idcliente
+	GROUP BY cl.nomecliente
+	ORDER BY total DESC;
+
+-- ex18
+SELECT cidade, COUNT(*) AS qtdclientes
+	FROM cliente AS cli
+	GROUP BY cidade
+	ORDER BY qtdclientes DESC
+	LIMIT 5;
+
+-- ex19
+-- ex20
+-- ex21
+-- ex22
