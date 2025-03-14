@@ -9,6 +9,9 @@ public class ControlaProduto {
         prod.descricao="Peixe";
         prod.valor=150;
         prod.listarProduto();
+
+        produto prod2 = new produto(4567,"Frango",50);
+        prod2.listarProduto();
     }
 
 }
