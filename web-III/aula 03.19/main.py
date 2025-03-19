@@ -34,15 +34,28 @@ def maior(*args):
 # funcao(*r)
 
 # **kwargs() - empacotados dicionario ----------------------------------------------
-def exemplo(**kwargs):
-    print(kwargs)
+# def exemplo(**kwargs):
+#     print(kwargs)
 
-exemplo(a=1,b=2,c=3)
+# exemplo(a=1,b=2,c=3)
 
-def pessoa(nome,idade,cidade):
-    print(f"Nome: {nome}")
-    print(f"Idade: {idade}")
-    print(f"Cidade: {cidade}")
+# def pessoa(nome,idade,cidade):
+#     print(f"Nome: {nome}")
+#     print(f"Idade: {idade}")
+#     print(f"Cidade: {cidade}")
 
-info_pessoa={"nome":"Thereza","idade":30,"cidade":"Niteroi"}
-pessoa(**info_pessoa)
+# info_pessoa={"nome":"Thereza","idade":30,"cidade":"Niteroi"}
+# pessoa(**info_pessoa)
+
+
+
+# exceção
+try:
+    a=int(input("Digite um numero: "))
+    b=int(input("Digite outro numero: "))
+    r=a/b
+except:
+
+    print("Tivemos um problema no sitema")
+else:
+    print(f"a divisao de {a}/{b}={r}")
