@@ -62,4 +62,7 @@ public class pessoa {
         System.out.println(peso);
         System.out.println(altura);
     }
+    public double calcularimc(){
+        return peso/(altura*altura);
+    }
 }

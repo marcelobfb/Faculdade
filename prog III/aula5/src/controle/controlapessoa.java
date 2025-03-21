@@ -17,6 +17,7 @@ public class controlapessoa {
         double altura=scanner.nextDouble();
         pessoa pessoa=new pessoa(id,nome,idade,peso,altura);
         pessoa.listarPessoa();
+        System.out.printf("IMC: "+pessoa.calcularimc());
         scanner.close();
     }
 }
