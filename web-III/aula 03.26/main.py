@@ -78,16 +78,76 @@ r_label.grid(row=3,column=0,padx=10,pady=10,columnspan=2)'''
 
 # Checkbutton() - selecao multipla
 
+'''def mostrar_selecionados():
+    selecionados=[]
+    if futebol_var.get():
+        selecionados.append("Futebol")
+    if volei_var.get():
+        selecionados.append("Volei")
+    if basquete_var.get():
+        selecionados.append("Basquete")
+    if surf_var.get():
+        selecionados.append("Surf")
+    r_label.config(text='Esporte selecionado: '+'♥'.join(selecionados))
+
+futebol_var=IntVar()
+volei_var=IntVar()
+basquete_var=IntVar()
+surf_var=IntVar()
+
 t=Label(i,text='Qual o seu esporte: ')
-t.grid(row=0,column=0,padx=10,pady=10)
-a1=Checkbutton(i,text='Futebol')
-a2=Checkbutton(i,text='Volei')
-a3=Checkbutton(i,text='Basquete')
-a4=Checkbutton(i,text='Surf')
+t.place(x=10,y=0)
+a1=Checkbutton(i,text='Futebol',variable=futebol_var)
+a2=Checkbutton(i,text='Volei',variable=volei_var)
+a3=Checkbutton(i,text='Basquete',variable=basquete_var)
+a4=Checkbutton(i,text='Surf',variable=surf_var)
+
 t.place(x=10,y=10)
 a1.place(x=10,y=40)
 a2.place(x=10,y=80)
 a3.place(x=10,y=120)
 a4.place(x=10,y=160)
+
+btn = Button(i, text="Clique aq", command=mostrar_selecionados)
+btn.place(x=10, y=200)
+
+r_label = Label(i,text='Esportes selecinados:Nenhum')
+r_label.place(x=10,y=300)'''
+
+
+# Radiobutton() - selecao simpels
+
+'''valor=IntVar()
+r1=Radiobutton(i,text='opcao 1',variable=valor,value=1)
+r2=Radiobutton(i,text='opcao 2',variable=valor,value=2)
+r3=Radiobutton(i,text='opcao 3',variable=valor,value=3)
+r1.place(x=10,y=10)
+r2.place(x=10,y=50)
+r3.place(x=10,y=90)'''
+
+# Listbox() - cria uma lista
+lista=Listbox(i)
+lista.insert(0,'AC')
+lista.insert(1,'AM')
+lista.insert(2,'RJ')
+lista.insert(3,'SP')
+lista.insert(4,'MG')
+lista.insert(END,'PR')
+
+estado=['a','b','c']
+for d in estado:
+    lista.insert(END,d)
+
+
+
+lista.pack()
+
+
+
+
+
+
+
+
 i.mainloop()
 
