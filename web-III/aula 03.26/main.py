@@ -126,25 +126,18 @@ r2.place(x=10,y=50)
 r3.place(x=10,y=90)'''
 
 # Listbox() - cria uma lista
-lista=Listbox(i)
+lista=Listbox(i,selectmode=MULTIPLE)
 lista.insert(0,'AC')
 lista.insert(1,'AM')
 lista.insert(2,'RJ')
 lista.insert(3,'SP')
 lista.insert(4,'MG')
 lista.insert(END,'PR')
+lista.pack()
 
 estado=['a','b','c']
 for d in estado:
     lista.insert(END,d)
-
-
-
-lista.pack()
-
-
-
-
 
 
 
