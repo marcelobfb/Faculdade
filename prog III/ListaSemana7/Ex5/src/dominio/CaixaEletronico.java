@@ -8,19 +8,16 @@ public class CaixaEletronico {
     }
 
     public int sacar(double valor) {
-        // Verifica se o valor é múltiplo de 10
         if (valor % 10 != 0) {
-            return -1; // Código de erro para valor não múltiplo de 10
+            return -1;
         }
 
-        // Verifica se há saldo suficiente
         if (valor > saldo) {
-            return -2; // Código de erro para saldo insuficiente
+            return -2;
         }
 
-        // Realiza o saque
         saldo -= valor;
-        return 1; // Código de sucesso
+        return 1;
     }
 
     public void exibirSaldo() {
