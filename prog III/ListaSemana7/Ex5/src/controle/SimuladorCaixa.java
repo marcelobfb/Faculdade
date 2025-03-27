@@ -6,7 +6,6 @@ public class SimuladorCaixa {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Inicializa o caixa com um saldo fictício
         CaixaEletronico caixa = new CaixaEletronico(1000.00);
 
         int opcao;
