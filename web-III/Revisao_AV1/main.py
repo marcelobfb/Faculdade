@@ -138,9 +138,11 @@ def infoLista():
     resp_label1.config(text=f"o 9 apareceu {nove} vezes")
     tres=lista.index(3)
     resp_label2.config(text=f"o 3 apareceu pela primeira vez na posição {tres}")
-    for i in range(0,4):
-        if lista[i]%2==0:
-            resp_label3.config(text=f"Quais foram o numero par: {lista[i]}")
+    pares = [str(lista[i]) for i in range(4) if lista[i] % 2 == 0]
+    if pares:
+        resp_label3.config(text=f"Números pares: {', '.join(pares)}")
+    else:
+        resp_label3.config(text="Não há números pares na lista.")
 tk=Tk()
 tk.geometry("500x300")
 num1=Entry(tk)
