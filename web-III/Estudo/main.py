@@ -9,9 +9,9 @@ def hexadecimalConv():
     hexadecimal=hex(inteiro)[2:]
     resp_label.config(text=f"O número transformado em hexadecimal é {hexadecimal}")
 def binarioInv():
-    binario=bin(input1.get())
+    binario=input1.get()
     inteiro = int(binario, 2)
-    resp_label.config(text=f"O número transformado em hexadecimal é {binarioInv}")
+    resp_label.config(text=f"O número transformado em decimal é {inteiro}")
     
 tk=Tk()
 header=Label(tk,text="Digite um numero para virar binario: ",padx=10,pady=10).pack()
