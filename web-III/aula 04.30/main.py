@@ -40,16 +40,37 @@ cursor = conexao.cursor()
 # print(cursor.rowcount,'Registro(s) inserido(s)')
 
 # inserir varios dados
-v=[
-    ("Ana Silva", 22, "ana.silva@gmail.com"),
-    ("Carlos Oliveira", 30, "carlos_oliveira@yahoo.com"),
-    ("Juliana Mendes", 25, "juliana.mendes@outlook.com"),
-    ("Felipe Souza", 28, "felipe.souza@live.com"),
-    ("Larissa Costa", 21, "larissa.costa@gmail.com"),
-    ("Roberto Lima", 35, "roberto.lima@uol.com.br"),
-    ("Tatiane Rocha", 26, "tatiane.rocha@protonmail.com")
-]
+# v=[
+#     ("Ana Silva", 22, "ana.silva@gmail.com"),
+#     ("Carlos Oliveira", 30, "carlos_oliveira@yahoo.com"),
+#     ("Juliana Mendes", 25, "juliana.mendes@outlook.com"),
+#     ("Felipe Souza", 28, "felipe.souza@live.com"),
+#     ("Larissa Costa", 21, "larissa.costa@gmail.com"),
+#     ("Roberto Lima", 35, "roberto.lima@uol.com.br"),
+#     ("Tatiane Rocha", 26, "tatiane.rocha@protonmail.com")
+# ]
 
-cursor.executemany('insert into aluno(nome,idade,email) values(%s,%s,%s)',v)
-conexao.commit()
-print(cursor.rowcount,'Registro(s) inserido(s)')
+# cursor.executemany('insert into aluno(nome,idade,email) values(%s,%s,%s)',v)
+# conexao.commit()
+# print(cursor.rowcount,'Registro(s) inserido(s)')
+
+
+# seleção simples ---------------------------------
+# cursor.execute('Select * from aluno')
+# r=cursor.fetchall()
+# print('Dados do aluno: ')
+# for i in r:
+#     print(i)
+
+# cursor.execute('Select nome, email from aluno')
+# r=cursor.fetchone()
+# print('Dados do aluno: ')
+# for i in r:
+#     print(i)
+
+# seleção condição - where -----------------------------
+cursor.execute('Select nome from aluno where idade>27')
+r=cursor.fetchall()
+print('Alunos maiores de 27 anos: ')
+for i in r:
+    print(i)
