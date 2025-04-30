@@ -69,8 +69,22 @@ cursor = conexao.cursor()
 #     print(i)
 
 # seleção condição - where -----------------------------
-cursor.execute('Select nome from aluno where idade>27')
+# cursor.execute('Select nome from aluno where idade>27')
+# r=cursor.fetchall()
+# print('Alunos maiores de 27 anos: ')
+# for i in r:
+#     print(i)
+
+
+# ordenação asc/des - order by --------------------------------
+# cursor.execute('Select nome,idade from aluno order by idade')
+# r=cursor.fetchall()
+# print('Alunos ordenados por idade: ')
+# for i in r:
+#     print(i)
+
+cursor.execute('Select * from aluno where idade>30 order by nome desc')
 r=cursor.fetchall()
-print('Alunos maiores de 27 anos: ')
+print('Alunos ordenados por nome(Z-A): ')
 for i in r:
     print(i)
