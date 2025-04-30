@@ -23,7 +23,33 @@ cursor = conexao.cursor()
 #     idade int(3),
 #     email varchar(50))''')
 
-# mostrar todas as tabelas
-cursor.execute('show tables')
-for i in cursor:
-    print(i)
+# mostrar todas as tabelas--------------------------------
+# cursor.execute('show tables')
+# for i in cursor:
+#     print(i)
+
+# mostrar a descrição da tabela-----------------------
+# cursor.execute('describe aluno')
+# for i in cursor:
+#     print(i)
+
+# inserir dados na tabela - insert into nome da tabela (atributos) values (valores) ------------------------------
+# y='insert into aluno(nome,idade,email) values("Marcelo",27,"marcelobouchardet@hotmail.com")'
+# cursor.execute(y)
+# conexao.commit()
+# print(cursor.rowcount,'Registro(s) inserido(s)')
+
+# inserir varios dados
+v=[
+    ("Ana Silva", 22, "ana.silva@gmail.com"),
+    ("Carlos Oliveira", 30, "carlos_oliveira@yahoo.com"),
+    ("Juliana Mendes", 25, "juliana.mendes@outlook.com"),
+    ("Felipe Souza", 28, "felipe.souza@live.com"),
+    ("Larissa Costa", 21, "larissa.costa@gmail.com"),
+    ("Roberto Lima", 35, "roberto.lima@uol.com.br"),
+    ("Tatiane Rocha", 26, "tatiane.rocha@protonmail.com")
+]
+
+cursor.executemany('insert into aluno(nome,idade,email) values(%s,%s,%s)',v)
+conexao.commit()
+print(cursor.rowcount,'Registro(s) inserido(s)')
