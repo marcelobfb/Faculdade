@@ -83,8 +83,8 @@ cursor = conexao.cursor()
 # for i in r:
 #     print(i)
 
-cursor.execute('Select * from aluno where idade>30 order by nome desc')
-r=cursor.fetchall()
-print('Alunos ordenados por nome(Z-A): ')
-for i in r:
-    print(i)
+# cursor.execute('Select * from aluno where idade>30 order by nome desc')
+# r=cursor.fetchall()
+# print('Alunos ordenados por nome(Z-A): ')
+# for i in r:
+#     print(i)
