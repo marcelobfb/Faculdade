@@ -16,7 +16,9 @@ def inserir():
                     (codigo, nome, preco, quantidade))
         conexao.commit()
         MessageBox.showinfo('Inserir', 'Produto inserido com sucesso!')
-    
+
+
+
 conexao = mysql.connector.connect(host='LocalHost', user='root', password='', database='loja')
 cursor = conexao.cursor()
 cursor.execute('create database if not exists loja')
