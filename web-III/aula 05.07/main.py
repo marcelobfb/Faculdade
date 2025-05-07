@@ -29,9 +29,9 @@ Label(root,text='Quantidade:').grid(row=3,column=0,padx=5,pady=5)
 e_qtd=Entry(root)
 e_qtd.grid(row=3,column=1,padx=5,pady=5)
 
-Button(root,text='Inserir').grid(row=4,column=0,padx=5,pady=5)
-Button(root,text='Excluir').grid(row=4,column=1,padx=5,pady=5)
-Button(root,text='Alterar').grid(row=4,column=2,padx=5,pady=5)
-Button(root,text='Consultar').grid(row=4,column=3,padx=5,pady=5)
+Button(root,text='Consultar').grid(row=4,column=0,padx=5,pady=5)
+Button(root,text='Inserir').grid(row=5,column=0,padx=5,pady=5)
+Button(root,text='Alterar').grid(row=6,column=0,padx=5,pady=5)
+Button(root,text='Excluir').grid(row=7,column=0,padx=5,pady=5)
 
 root.mainloop()
