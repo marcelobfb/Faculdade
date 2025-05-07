@@ -88,3 +88,27 @@ cursor = conexao.cursor()
 # print('Alunos ordenados por nome(Z-A): ')
 # for i in r:
 #     print(i)
+
+# ----------continuação da aula---------------------
+
+# delete- deleta apenas 1 -----------------------
+# cursor.execute('delete from aluno where matricula=1')
+# conexao.commit()
+# print(cursor.rowcount,'Registro(s) deletado(s)')
+
+
+
+# deletar multiplos registros IN----------------------------------
+
+# r='delete from aluno where matricula in(%s,%s)'
+# cursor.execute(r,(2,4))
+# conexao.commit()
+# print(cursor.rowcount,'Registro(s) deletado(s)')
+
+
+# deletar com intervalo between --------------------
+# r1='delete from aluno where matricula between %s and %s'
+# cursor.execute(r1,(6,8))
+# conexao.commit()
+# print(cursor.rowcount,'Registro(s) deletado(s)')
+
