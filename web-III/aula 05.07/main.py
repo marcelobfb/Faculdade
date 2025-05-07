@@ -2,6 +2,13 @@ from mysql import connector
 import mysql
 from tkinter import*
 
+def inserir():
+    codigo=e_codigo.get()
+    nome=e_nome.get()
+    preco=e_preco()
+    
+    
+
 conexao = mysql.connector.connect(host='LocalHost', user='root', password='', database='loja')
 cursor = conexao.cursor()
 cursor.execute('create database if not exists loja')
