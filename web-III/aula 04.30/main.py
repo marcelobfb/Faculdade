@@ -112,3 +112,16 @@ cursor = conexao.cursor()
 # conexao.commit()
 # print(cursor.rowcount,'Registro(s) deletado(s)')
 
+# update--------------------------------------------------------------
+# cursor.execute('update aluno set nome="Marcelo Bernardes" where matricula=3')
+# conexao.commit()
+
+# drop - apaga tudo ------------------------------------------------------
+# cursor.execute('drop database testemarcelo')
+# cursor.execute('drop table testemarcelo')
+
+
+# encerrar coneccao---------------------------------------------------
+cursor.close()
+conexao.close()
+print('Conexão encerrada')
