@@ -1,14 +1,22 @@
 from mysql import connector
 import mysql
 from tkinter import*
+import tkinter.messagebox as MessageBox
 
 def inserir():
     codigo=e_codigo.get()
     nome=e_nome.get()
-    preco=e_preco()
+    preco=e_preco.get()
+    quantidade=e_qtd.get()
     
+    if(codigo=='' or nome== '' or preco=='' or quantidade==''):
+        MessageBox.showerror('Inserir','Todos os campos são obrigatórios.')
+    else:
+        cursor.execute('INSERT INTO produto(cod, nome, preco, qtd) VALUES (%s, %s, %s, %s)',
+                    (codigo, nome, preco, quantidade))
+        conexao.commit()
+        MessageBox.showinfo('Inserir', 'Produto inserido com sucesso!')
     
-
 conexao = mysql.connector.connect(host='LocalHost', user='root', password='', database='loja')
 cursor = conexao.cursor()
 cursor.execute('create database if not exists loja')
@@ -40,7 +48,7 @@ frame_botoes = Frame(root)
 frame_botoes.grid(row=4, column=0, columnspan=2, pady=10)
 
 Button(frame_botoes, text='Consultar').pack(side=LEFT, padx=5)
-Button(frame_botoes, text='Inserir').pack(side=LEFT, padx=5)
+Button(frame_botoes, text='Inserir',command=inserir).pack(side=LEFT, padx=5)
 Button(frame_botoes, text='Alterar').pack(side=LEFT, padx=5)
 Button(frame_botoes, text='Excluir').pack(side=LEFT, padx=5)
 
