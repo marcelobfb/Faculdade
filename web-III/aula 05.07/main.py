@@ -16,6 +16,26 @@ def inserir():
                     (codigo, nome, preco, quantidade))
         conexao.commit()
         MessageBox.showinfo('Inserir', 'Produto inserido com sucesso!')
+        
+        e_codigo.delete(0,END)
+        e_nome.delete(0,END)
+        e_preco.delete(0,END)
+        e_qtd.delete(0,END)
+
+def excluir():
+    codigo=e_codigo.get()
+    nome=e_nome.get()
+    preco=e_preco.get()
+    quantidade=e_qtd.get()
+    
+    if(codigo==''):
+        MessageBox.showerror('Excluir','Informe o codigo do produto.')
+    else:
+        cursor.execute('delete from produto where cod = %s',(codigo,))
+        conexao.commit()
+        MessageBox.showinfo('Excluir', 'Produto excluido com sucesso!')
+        
+        e_codigo.delete(0,END)
 
 
 
@@ -52,6 +72,6 @@ frame_botoes.grid(row=4, column=0, columnspan=2, pady=10)
 Button(frame_botoes, text='Consultar').pack(side=LEFT, padx=5)
 Button(frame_botoes, text='Inserir',command=inserir).pack(side=LEFT, padx=5)
 Button(frame_botoes, text='Alterar').pack(side=LEFT, padx=5)
-Button(frame_botoes, text='Excluir').pack(side=LEFT, padx=5)
+Button(frame_botoes, text='Excluir',command=excluir).pack(side=LEFT, padx=5)
 
 root.mainloop()
