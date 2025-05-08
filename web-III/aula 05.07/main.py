@@ -72,16 +72,16 @@ def selecionar():
         else:
             MessageBox.showerror('Selecionar', 'produto nao encontrado!')
 
-conexao = mysql.connector.connect(host='LocalHost', user='root', password='', database='loja')
+conexao = mysql.connector.connect(host='LocalHost', user='root', password='')
 cursor = conexao.cursor()
 cursor.execute('create database if not exists loja')
 cursor.execute('use loja')
 
-# cursor.execute('''create table produto(
-#     cod int primary key,
-#     nome varchar(30) not null,
-#     preco decimal(10,2) not null,
-#     qtd int not null)''')
+cursor.execute('''create table if not exists produto(
+    cod int primary key,
+    nome varchar(30) not null,
+    preco decimal(10,2) not null,
+    qtd int not null)''')
 
 root=Tk()
 root.geometry('237x170')
