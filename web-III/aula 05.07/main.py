@@ -24,9 +24,6 @@ def inserir():
 
 def excluir():
     codigo=e_codigo.get()
-    nome=e_nome.get()
-    preco=e_preco.get()
-    quantidade=e_qtd.get()
     
     if(codigo==''):
         MessageBox.showerror('Excluir','Informe o codigo do produto.')
@@ -37,7 +34,22 @@ def excluir():
         
         e_codigo.delete(0,END)
 
-
+def alterar():
+    codigo=e_codigo.get()
+    nome=e_nome.get()
+    preco=e_preco.get()
+    quantidade=e_qtd.get()
+    
+    if(codigo=='' or nome== '' or preco=='' or quantidade==''):
+        MessageBox.showerror('Alterar','Todos os campos são obrigatórios.')
+    else:
+        cursor.execute('update produto set nome=%s,preco=%s,qtd=%s where cod=%s',(nome,preco,quantidade,codigo))
+        conexao.commit()
+        MessageBox.showinfo('Alterar', 'Produto atualizar com sucesso!')
+        e_codigo.delete(0,END)
+        e_nome.delete(0,END)
+        e_preco.delete(0,END)
+        e_qtd.delete(0,END)
 
 conexao = mysql.connector.connect(host='LocalHost', user='root', password='', database='loja')
 cursor = conexao.cursor()
@@ -71,7 +83,7 @@ frame_botoes.grid(row=4, column=0, columnspan=2, pady=10)
 
 Button(frame_botoes, text='Consultar').pack(side=LEFT, padx=5)
 Button(frame_botoes, text='Inserir',command=inserir).pack(side=LEFT, padx=5)
-Button(frame_botoes, text='Alterar').pack(side=LEFT, padx=5)
+Button(frame_botoes, text='Alterar',command=alterar).pack(side=LEFT, padx=5)
 Button(frame_botoes, text='Excluir',command=excluir).pack(side=LEFT, padx=5)
 
 root.mainloop()
