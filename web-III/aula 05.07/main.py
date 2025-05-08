@@ -51,6 +51,27 @@ def alterar():
         e_preco.delete(0,END)
         e_qtd.delete(0,END)
 
+def selecionar():
+    codigo=e_codigo.get()
+    if codigo=="":
+        MessageBox.showerror('Selecionar','Todos os campos são obrigatórios.')
+    else:
+        cursor.execute('select * from produto where cod=%s',(codigo,))
+        r=cursor.fetchall()
+        if r:
+            for r1 in r:
+                            e_nome.delete(0, END)
+                            e_preco.delete(0, END)
+                            e_qtd.delete(0, END)
+                            
+                            e_nome.insert(0, r1[1])
+                            e_preco.insert(0, r1[2])
+                            e_qtd.insert(0, r1[3])
+                            
+                            MessageBox.showinfo('Selecionar', f'Selecionado com sucesso!\n\nCódigo: {r1[0]}\nNome: {r1[1]}\nPreço: {r1[2]}\nQuantidade: {r1[3]}')
+        else:
+            MessageBox.showerror('Selecionar', 'produto nao encontrado!')
+
 conexao = mysql.connector.connect(host='LocalHost', user='root', password='', database='loja')
 cursor = conexao.cursor()
 cursor.execute('create database if not exists loja')
@@ -81,7 +102,7 @@ e_qtd.grid(row=3,column=1,padx=5,pady=5)
 frame_botoes = Frame(root)
 frame_botoes.grid(row=4, column=0, columnspan=2, pady=10)
 
-Button(frame_botoes, text='Consultar').pack(side=LEFT, padx=5)
+Button(frame_botoes, text='Consultar',command=selecionar).pack(side=LEFT, padx=5)
 Button(frame_botoes, text='Inserir',command=inserir).pack(side=LEFT, padx=5)
 Button(frame_botoes, text='Alterar',command=alterar).pack(side=LEFT, padx=5)
 Button(frame_botoes, text='Excluir',command=excluir).pack(side=LEFT, padx=5)
