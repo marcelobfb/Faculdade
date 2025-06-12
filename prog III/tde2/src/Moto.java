@@ -1,4 +1,4 @@
-// Moto.java
+
 public class Moto extends Veiculo {
     private int cilindrada;
 

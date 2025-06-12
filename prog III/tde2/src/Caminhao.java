@@ -1,4 +1,4 @@
-// Caminhao.java
+
 public class Caminhao extends Veiculo {
     private double capacidadeCarga; // em toneladas
 

@@ -1,4 +1,4 @@
-// Veiculo.java
+
 public abstract class Veiculo implements Exibivel {
     protected String placa;
     protected String modelo;

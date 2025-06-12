@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-// SistemaVeiculos.java
 public class SistemaVeiculos {
 
     private static ArrayList<Veiculo> listaVeiculos = new ArrayList<>();
@@ -28,7 +27,7 @@ public class SistemaVeiculos {
                 default:
                     System.out.println("Opção inválida. Por favor, tente novamente.");
             }
-            System.out.println(); // Linha em branco para melhor visualização
+            System.out.println();
         } while (opcao != 3);
 
         scanner.close();
@@ -47,19 +46,19 @@ public class SistemaVeiculos {
             return scanner.nextInt();
         } catch (InputMismatchException e) {
             System.out.println("Entrada inválida. Por favor, digite um número.");
-            scanner.next(); // Limpa o buffer do scanner
-            return -1; // Retorna uma opção inválida para repetir o loop
+            scanner.next();
+            return -1;
         } finally {
-            scanner.nextLine(); // Consome a quebra de linha pendente após nextInt()
+            scanner.nextLine();
         }
     }
 
     private static void cadastrarVeiculo() {
         System.out.println("\n--- Cadastro de Veículo ---");
         System.out.print("Tipo (1-Carro, 2-Moto, 3-Caminhão): ");
-        int tipoVeiculo = lerOpcao(); // Reutiliza a função de leitura de opção para validar a entrada
+        int tipoVeiculo = lerOpcao();
 
-        if (tipoVeiculo == -1) { // Se a entrada do tipo for inválida, retorna
+        if (tipoVeiculo == -1) {
             return;
         }
 
@@ -73,10 +72,10 @@ public class SistemaVeiculos {
             ano = scanner.nextInt();
         } catch (InputMismatchException e) {
             System.out.println("Ano inválido. Por favor, digite um número.");
-            scanner.next(); // Limpa o buffer do scanner
+            scanner.next();
             return;
         } finally {
-            scanner.nextLine(); // Consome a quebra de linha
+            scanner.nextLine();
         }
 
 
@@ -88,7 +87,7 @@ public class SistemaVeiculos {
                     qtdPortas = scanner.nextInt();
                 } catch (InputMismatchException e) {
                     System.out.println("Quantidade de portas inválida. Por favor, digite um número.");
-                    scanner.next(); // Limpa o buffer do scanner
+                    scanner.next();
                     return;
                 } finally {
                     scanner.nextLine();
@@ -103,7 +102,7 @@ public class SistemaVeiculos {
                     cilindrada = scanner.nextInt();
                 } catch (InputMismatchException e) {
                     System.out.println("Cilindrada inválida. Por favor, digite um número.");
-                    scanner.next(); // Limpa o buffer do scanner
+                    scanner.next();
                     return;
                 } finally {
                     scanner.nextLine();
@@ -118,7 +117,7 @@ public class SistemaVeiculos {
                     capacidadeCarga = scanner.nextDouble();
                 } catch (InputMismatchException e) {
                     System.out.println("Capacidade de carga inválida. Por favor, digite um número.");
-                    scanner.next(); // Limpa o buffer do scanner
+                    scanner.next();
                     return;
                 } finally {
                     scanner.nextLine();
@@ -138,7 +137,7 @@ public class SistemaVeiculos {
             System.out.println("Nenhum veículo cadastrado ainda.");
         } else {
             for (Veiculo veiculo : listaVeiculos) {
-                veiculo.exibirDados(); // Polimorfismo em ação!
+                veiculo.exibirDados();
             }
         }
     }
