@@ -5,9 +5,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
-  <artifactId>Ex3</artifactId>
+  <artifactId>Exercicio3</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <name>Ex3</name>
+  <name>Exercicio3</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -58,7 +58,7 @@
             <!-- Default configuration for running with: mvn clean javafx:run -->
             <id>default-cli</id>
             <configuration>
-              <mainClass>com.example.ex3/com.example.ex3.HelloApplication</mainClass>
+              <mainClass>com.example.exercicio3/com.example.exercicio3.HelloApplication</mainClass>
               <launcher>app</launcher>
               <jlinkZipName>app</jlinkZipName>
               <jlinkImageName>app</jlinkImageName>
