@@ -1,5 +1,5 @@
 public class Automovel {
-    private String placa; // Unique key
+    private String placa;
     private String modelo;
     private String marca;
     private int ano;

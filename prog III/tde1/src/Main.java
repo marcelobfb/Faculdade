@@ -13,10 +13,10 @@ public class Main {
             try {
                 System.out.print("Escolha uma opção: ");
                 opcao = scanner.nextInt();
-                scanner.nextLine(); // Consume newline
+                scanner.nextLine();
 
                 switch (opcao) {
-                    case 1: // Incluir automóvel
+                    case 1:
                         System.out.println("\n--- Incluir Automóvel ---");
                         System.out.print("Placa: ");
                         String placaIncluir = scanner.nextLine();
@@ -28,7 +28,7 @@ public class Main {
                         int anoIncluir = scanner.nextInt();
                         System.out.print("Valor: ");
                         double valorIncluir = scanner.nextDouble();
-                        scanner.nextLine(); // Consume newline
+                        scanner.nextLine();
 
                         Automovel novoAutomovel = new Automovel(placaIncluir, modeloIncluir, marcaIncluir, anoIncluir, valorIncluir);
                         if (!gerenciador.incluirAutomovel(novoAutomovel)) {
@@ -36,7 +36,7 @@ public class Main {
                         }
                         break;
 
-                    case 2: // Remover automóvel
+                    case 2:
                         System.out.println("\n--- Remover Automóvel ---");
                         System.out.print("Digite a placa do automóvel a ser removido: ");
                         String placaRemover = scanner.nextLine();
@@ -45,7 +45,7 @@ public class Main {
                         }
                         break;
 
-                    case 3: // Alterar dados de automóvel
+                    case 3:
                         System.out.println("\n--- Alterar Dados de Automóvel ---");
                         System.out.print("Digite a placa do automóvel a ser alterado: ");
                         String placaAlterar = scanner.nextLine();
@@ -61,7 +61,7 @@ public class Main {
                             int novoAno = scanner.nextInt();
                             System.out.print("Novo Valor (" + String.format("%.2f", autoParaAlterar.getValor()) + "): ");
                             double novoValor = scanner.nextDouble();
-                            scanner.nextLine(); // Consume newline
+                            scanner.nextLine();
 
                             gerenciador.alterarAutomovel(placaAlterar, novoModelo, novaMarca, novoAno, novoValor);
                         } else {
@@ -69,7 +69,7 @@ public class Main {
                         }
                         break;
 
-                    case 4: // Consultar automóvel por placa
+                    case 4:
                         System.out.println("\n--- Consultar Automóvel por Placa ---");
                         System.out.print("Digite a placa do automóvel a ser consultado: ");
                         String placaConsultar = scanner.nextLine();
@@ -81,7 +81,7 @@ public class Main {
                         }
                         break;
 
-                    case 5: // Listar automóveis (ordenado)
+                    case 5:
                         System.out.println("\n--- Listar Automóveis ---");
                         System.out.println("Ordenar por: ");
                         System.out.println("1 - Placa");
@@ -89,7 +89,7 @@ public class Main {
                         System.out.println("3 - Marca");
                         System.out.print("Escolha o critério de ordenação: ");
                         int criterioOpcao = scanner.nextInt();
-                        scanner.nextLine(); // Consume newline
+                        scanner.nextLine();
 
                         String criterio = "";
                         switch (criterioOpcao) {
@@ -120,7 +120,7 @@ public class Main {
                         }
                         break;
 
-                    case 6: // Salvar e sair
+                    case 6:
                         System.out.println("Salvando dados e saindo...");
                         gerenciador.salvarDados();
                         break;
@@ -130,10 +130,10 @@ public class Main {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Entrada inválida. Por favor, digite um número.");
-                scanner.nextLine(); // Clear the invalid input from the scanner
-                opcao = 0; // Set to 0 to keep the loop going
+                scanner.nextLine();
+                opcao = 0;
             }
-            System.out.println(); // Blank line for readability
+            System.out.println();
         } while (opcao != 6);
 
         scanner.close();

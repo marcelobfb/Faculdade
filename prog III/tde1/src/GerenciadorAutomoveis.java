@@ -10,19 +10,13 @@ public class GerenciadorAutomoveis {
 
     public GerenciadorAutomoveis() {
         automoveis = new ArrayList<>();
-        carregarDados(); // Load data when the manager is initialized
+        carregarDados();
     }
 
-    /**
-     * Includes a new car in the list.
-     *
-     * @param automovel The Automovel object to be included.
-     * @return true if the car was successfully included, false if the license plate already exists.
-     */
     public boolean incluirAutomovel(Automovel automovel) {
         for (Automovel a : automoveis) {
             if (a.getPlaca().equalsIgnoreCase(automovel.getPlaca())) {
-                return false; // License plate already exists
+                return false;
             }
         }
         automoveis.add(automovel);
@@ -30,12 +24,6 @@ public class GerenciadorAutomoveis {
         return true;
     }
 
-    /**
-     * Removes a car based on its license plate.
-     *
-     * @param placa The license plate of the car to be removed.
-     * @return true if the car was successfully removed, false if not found.
-     */
     public boolean removerAutomovel(String placa) {
         Iterator<Automovel> iterator = automoveis.iterator();
         while (iterator.hasNext()) {
@@ -46,19 +34,9 @@ public class GerenciadorAutomoveis {
                 return true;
             }
         }
-        return false; // Car not found
+        return false;
     }
 
-    /**
-     * Alters the data of an existing car.
-     *
-     * @param placa The license plate of the car to be altered.
-     * @param novoModelo The new model.
-     * @param novaMarca The new brand.
-     * @param novoAno The new year.
-     * @param novoValor The new value.
-     * @return true if the car was successfully altered, false if not found.
-     */
     public boolean alterarAutomovel(String placa, String novoModelo, String novaMarca, int novoAno, double novoValor) {
         for (Automovel a : automoveis) {
             if (a.getPlaca().equalsIgnoreCase(placa)) {
@@ -70,32 +48,20 @@ public class GerenciadorAutomoveis {
                 return true;
             }
         }
-        return false; // Car not found
+        return false;
     }
 
-    /**
-     * Consults and displays the data of a car by its license plate.
-     *
-     * @param placa The license plate of the car to be consulted.
-     * @return The Automovel object if found, otherwise null.
-     */
     public Automovel consultarAutomovel(String placa) {
         for (Automovel a : automoveis) {
             if (a.getPlaca().equalsIgnoreCase(placa)) {
                 return a;
             }
         }
-        return null; // Car not found
+        return null;
     }
 
-    /**
-     * Lists all cars, ordered by the specified criteria.
-     *
-     * @param criterioDeOrdenacao The sorting criterion ("placa", "modelo", or "marca").
-     * @return A sorted ArrayList of Automovel objects.
-     */
     public ArrayList<Automovel> listarAutomoveis(String criterioDeOrdenacao) {
-        ArrayList<Automovel> listaOrdenada = new ArrayList<>(automoveis); // Create a copy to sort
+        ArrayList<Automovel> listaOrdenada = new ArrayList<>(automoveis);
 
         switch (criterioDeOrdenacao.toLowerCase()) {
             case "placa":
@@ -115,9 +81,6 @@ public class GerenciadorAutomoveis {
         return listaOrdenada;
     }
 
-    /**
-     * Saves the current list of cars to a text file.
-     */
     public void salvarDados() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(NOME_ARQUIVO))) {
             for (Automovel a : automoveis) {
@@ -130,9 +93,6 @@ public class GerenciadorAutomoveis {
         }
     }
 
-    /**
-     * Loads car data from a text file into the ArrayList.
-     */
     private void carregarDados() {
         File arquivo = new File(NOME_ARQUIVO);
         if (!arquivo.exists()) {
@@ -140,7 +100,7 @@ public class GerenciadorAutomoveis {
             return;
         }
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(NOME_ARQUIVO))) { // CORRECTED LINE HERE
+        try (BufferedReader reader = new BufferedReader(new FileReader(NOME_ARQUIVO))) {
             String linha;
             while ((linha = reader.readLine()) != null) {
                 String[] dados = linha.split(",");
