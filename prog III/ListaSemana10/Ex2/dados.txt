@@ -1,0 +1,2 @@
+Este é um exemplo de texto
+para contar palavras no arquivo.
