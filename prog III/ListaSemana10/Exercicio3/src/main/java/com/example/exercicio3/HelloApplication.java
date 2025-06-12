@@ -1,4 +1,4 @@
-package com.example.exercicio3; // Mantenha este nome de pacote!
+package com.example.exercicio3;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -10,9 +10,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-// Renomeie a classe para HelloApplication se você estiver substituindo o arquivo existente
-// Ou renomeie o arquivo para Exercicio3.java se preferir
-public class HelloApplication extends Application { // Ou public class Exercicio3 extends Application {
+public class HelloApplication extends Application {
 
     public static void main(String[] args) {
         launch(args);
