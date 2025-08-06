@@ -24,7 +24,7 @@ public class ControleCliente {
             case 1:
                 PessoaFisica pf= new PessoaFisica(endereco, telefone, id, descricao);
                 System.out.println("CLIENTE CADASTRADO");
-                System.out.println("CPF:"+pf.getCpf());
+                System.out.println("CPF:"+pf.formatarRegistro());
                 System.out.println("Nome:"+pf.getNome());
                 System.out.println("Endereço:"+pf.getEndereco());
                 System.out.println("Telefone:"+pf.formatarTelefone());
@@ -33,7 +33,7 @@ public class ControleCliente {
                 PessoaJuridica pj= new PessoaJuridica(endereco, telefone, id, descricao);
                 System.out.println("CLIENTE CADASTRADO");
                 System.out.println("CNPJ:"+pj.getCnpj());
-                System.out.println("Razão Social:"+pj.getRazaosocial());
+                System.out.println("Razão Social:"+pj.formatarRegistro());
                 System.out.println("Endereço:"+pj.getEndereco());
                 System.out.println("Telefone:"+pj.formatarTelefone());
                 break;
