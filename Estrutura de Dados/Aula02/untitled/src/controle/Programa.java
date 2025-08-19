@@ -24,10 +24,15 @@ public class Programa {
             String especie = input.nextLine();
             System.out.print("Raça: ");
             String raca = input.nextLine();
-            System.out.print("----------------");
+            System.out.println("----------------");
 
             Animal animal = new Animal(nome, especie, raca);
             cliente.addAnimal(animal);
+        }
+        System.out.println("Animais do Cliente "+ cliente.getNome());
+//        System.out.println(cliente.getAnimais());
+        for(Animal animal : cliente.getAnimais()){
+            System.out.println("Nome: " + animal.getNome());
         }
     }
 }
