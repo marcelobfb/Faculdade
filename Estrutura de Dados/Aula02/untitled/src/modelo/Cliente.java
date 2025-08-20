@@ -36,6 +36,12 @@ public class Cliente {
     }
 
     public void removerAnimal(Animal exAnimal) {
+        for (int j = 0; j < animais.length; j++) {
+            if (animais[j] == exAnimal) {
+                animais[j] = null;
+                exAnimal.setCliente(null);
+            }
+        }
     }
 
     public Animal[] getAnimais() {

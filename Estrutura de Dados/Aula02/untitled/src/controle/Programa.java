@@ -33,6 +33,9 @@ public class Programa {
 //        System.out.println(cliente.getAnimais());
         for(Animal animal : cliente.getAnimais()){
             System.out.println("Nome: " + animal.getNome());
+            System.out.println("Espécie: " + animal.getEspecie());
+            System.out.println("Raça: " + animal.getRaca());
+            System.out.println("----------------");
         }
     }
 }
