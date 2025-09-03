@@ -40,7 +40,8 @@ public class Programa {
 
         Iterator iterator = cliente.getAnimais().iterator();
 
-        for(Animal animal : cliente.getAnimais()) {
+        while(iterator.hasNext()) {
+            Animal animal = (Animal) iterator.next();
             System.out.print("Nome: " + animal.getNome());
             System.out.print(" | Espécie: " + animal.getEspecie());
             System.out.println(" | Raça: " + animal.getRaca());
