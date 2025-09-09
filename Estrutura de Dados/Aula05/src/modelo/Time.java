@@ -7,7 +7,7 @@ public class Time {
     private ArrayList<Jogador> jogadores;
 
     public Time() {
-
+        jogadores = new ArrayList<Jogador>();
     }
 
     public String getSigla() {
