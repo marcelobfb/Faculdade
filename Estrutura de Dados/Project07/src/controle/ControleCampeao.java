@@ -16,9 +16,7 @@ public class ControleCampeao {
 		campeoes.add(new Campeao(2018, "França"));
 		
 		for(Campeao campeao : campeoes) {
-			System.out.println(campeao.getAno()+":"+campeao.getSelecao());
+			System.out.println(campeao.getAno()+"|"+campeao.getSelecao());
 		}
-
 	}
-
 }

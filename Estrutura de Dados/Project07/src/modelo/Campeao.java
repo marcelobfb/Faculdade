@@ -1,6 +1,6 @@
 package modelo;
 
-public class Campeao {
+public class Campeao implements Comparable<Campeao>{
 	private int ano;
 	private String selecao;
 	
@@ -23,5 +23,13 @@ public class Campeao {
 
 	public void setSelecao(String selecao) {
 		this.selecao = selecao;
+	}
+	
+	public int compareTo(Campeao campeao) {
+		if(this.ano>campeao.getAno())
+			return 1;
+		else if(this.ano<campeao.getAno())
+			return -1;
+		return 0;
 	}
 }
