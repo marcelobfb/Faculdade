@@ -1,0 +1,16 @@
+Requisito funcional e nao funcional -> vai cair na prova
+
+📌 Diferença Principal
+Requisito Funcional	   - Requisito Não Funcional
+O que o sistema faz    - Como o sistema faz
+Define funcionalidades - Define qualidade e restrições
+Ex: emitir nota fiscal - Ex: emitir nota em até 1 segundo
+--
+Quais sao as atividades genericas do processo de software -> vai cair na prova
+--
+Quais são os atributos de um bom sofware? - vai cair na prova
+-facilidade de manutençao
+-confiança
+-eficiencia
+-aceitabilidade
+--
