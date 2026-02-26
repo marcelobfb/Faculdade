@@ -3,20 +3,22 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Inclusao1 {
+public class Lista {
 	static final String url = "jdbc:mysql://localhost:3306/escola";
 	
-	public Inclusao1() {
-		String sql= "INSERT INTO aluno(cpf,nome)VALUES('98745632115','Fernanda')";
+	public Lista() {
+		String sql= "SELECT * FROM aluno";
 		
 		try {
 			Connection conexao=DriverManager.getConnection(url,"root","");
 			PreparedStatement operacao = conexao.prepareStatement(sql);
-			operacao.execute();
+			ResultSet resultado = operacao.executeQuery();
 			
-			System.out.print("Aluno incluido com sucesso!");
+			resultado.first();
+			System.out.print(resultado.getObject(1)+"|"+resultado.getObject(2)+"|"+resultado.getObject(3));
 			conexao.close();
 		}
 		catch(SQLException e) {

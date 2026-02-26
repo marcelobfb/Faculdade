@@ -6,6 +6,10 @@ public class programa {
 		//Conexao conexao = new Conexao();
 		//CriacaoDB criacaoDB = new CriacaoDB();
 		//CriacaoTabela criacaoTabela = new CriacaoTabela();
-		Inclusao1 inclusao1 = new Inclusao1();
+		//Inclusao1 inclusao1 = new Inclusao1();
+		//Inclusao2 inclusao2 = new Inclusao2();
+		//Alteracao alteracao = new Alteracao();
+		//Remocao remocao = new Remocao();
+		Lista lista = new Lista();
 	}
 }
