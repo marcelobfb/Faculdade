@@ -1,5 +1,6 @@
 package controle;
 
+import dao.DaoCriacaoTabela;
 import view.CadastroAnimal;
 
 public class Programa {
@@ -7,5 +8,7 @@ public class Programa {
 		CadastroAnimal cadastroAnimal = new CadastroAnimal();
 		
 		cadastroAnimal.setVisible(true);
+		
+		DaoCriacaoTabela daoCriacaoTabela = new DaoCriacaoTabela();
 	}
 }

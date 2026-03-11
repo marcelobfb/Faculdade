@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.Properties;
 
@@ -21,10 +22,16 @@ public class DaoCriacaoTabela {
 			String usuario = props.getProperty("db.usuario");
 			String senha = props.getProperty("db.senha");
 			
-			Class.forName(driver);
+			//Class.forName(driver);
 			Connection conexao = DriverManager.getConnection(url,usuario,senha);
+			PreparedStatement operacao = conexao.prepareStatement(sql);
+			operacao.execute();
+			
+			System.out.println("Tabela criada");
+			conexao.close();
+			operacao.close();
 		}
-		catch(IOException | ClassNotFoundException | SQLException e) {
+		catch(IOException |SQLException e) {
 			System.out.println("Erro: "+ e.getMessage());
 		}
 	}
