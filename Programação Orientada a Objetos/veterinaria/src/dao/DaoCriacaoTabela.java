@@ -10,8 +10,11 @@ import java.util.Properties;
 
 public class DaoCriacaoTabela {
 	public DaoCriacaoTabela() {
-		String sql="CREATE TABLE animal(id INT NOT NULL AUT_INCREMENT PRIMARY KEY, nome VARCHAR(30), especie VARCHAR(30), raca VARCHAR(30)) ";
-		
+		String sql = "CREATE TABLE animal ("
+		           + "id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, "
+		           + "nome VARCHAR(30), "
+		           + "especie VARCHAR(30), "
+		           + "raca VARCHAR(30))";
 		try {
 			Properties props = new Properties();
 			FileInputStream arquivo = new FileInputStream("db.properties");

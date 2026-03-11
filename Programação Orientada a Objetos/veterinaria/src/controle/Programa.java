@@ -9,6 +9,6 @@ public class Programa {
 		
 		cadastroAnimal.setVisible(true);
 		
-		DaoCriacaoTabela daoCriacaoTabela = new DaoCriacaoTabela();
+		//DaoCriacaoTabela daoCriacaoTabela = new DaoCriacaoTabela();
 	}
 }
